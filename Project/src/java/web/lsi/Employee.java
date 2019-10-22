@@ -5,7 +5,6 @@
  */
 package web.lsi;
 
-import java.util.ArrayList;
 
 
 
@@ -24,19 +23,43 @@ public class Employee {
     private String City;
     private String mail;
 
-    public ArrayList<String> getDetails() {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add(fName);
-        list.add(lName);
-        list.add(hPhone);
-        list.add(mPhone);
-        list.add(pPhone);
-        list.add(address);
-        list.add(postCode);
-        list.add(City);
-        list.add(mail);
-        return list;
+    public String getfName() {
+        return fName;
     }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public String gethPhone() {
+        return hPhone;
+    }
+
+    public String getmPhone() {
+        return mPhone;
+    }
+
+    public String getpPhone() {
+        return pPhone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public String getCity() {
+        return City;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    
 
     public void setfName(String fName) {
         this.fName = fName;
