@@ -24,12 +24,12 @@
 <c:choose>
     <c:when test="${(kUser.login == 'admin') && (kUser.pwd == 'admin')}">
         <c:set var="admin" value="true"/>
-        <c:redirect url="listEmployees.jsp">
+        <c:redirect url="listEmployeesServ">
             <c:param name="kUser" value="${admin}"/>
         </c:redirect>
     </c:when>
     <c:when test="${(kUser.login == 'empl') && (kUser.pwd == 'empl')}">
-        <c:redirect url="listEmployees.jsp">
+        <c:redirect url="listEmployeesServ">
             <c:param name="kUser" value="${admin}"/>
         </c:redirect>
     </c:when>

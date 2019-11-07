@@ -3,8 +3,9 @@
     Created on : 25 oct. 2019, 10:51:44
     Author     : hadri
 --%>
+<%@page import="javax.ejb.EJB"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.mycompany.prjv2.Employee"%>
+<%@page import="com.mycompany.prjv2.Employees"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -23,7 +24,7 @@
     SELECT * FROM EMPLOYEES;
 </sql:query>
 <c:forEach var="list" items="${rs.rows}">
-    <jsp:useBean id="tmp" class="Employee"/>
+    <jsp:useBean id="tmp" class="Employees"/>
     <jsp:setProperty name="tmp" param="${list.fName}" property="fName"/>
     <jsp:setProperty name="tmp" param="${list.lName}" property="lName"/>
     <jsp:setProperty name="tmp" param="${list.hPhone}" property="hPhone"/>
